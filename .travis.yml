@@ -21,17 +21,15 @@ env:
 before_install:
  - chmod a+x gradlew
 
+deploy:
+ provider: releases
+ api_key: "d84de92c2831e69bac8df19ae910d63f76116d4b"
+ file_glob: true
+ file: "build/outputs/aar/*.aar"
+ skip_cleanup: true
+ on:
+   tags: true
+   all_branches: true
+
 script:
   - ./gradlew clean build assemble
-
-
-deploy:
-  provider: releases
-  user: "c4d.sh.016@gmail.com"
-  password: "italia1369666"
-  file_glob: true
-  file: "build/outputs/aar/*.aar"
-  skip_cleanup: true
-  on:
-    tags: true
-    all_branches: true
