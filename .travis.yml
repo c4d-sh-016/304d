@@ -31,5 +31,6 @@ deploy:
    tags: true
    all_branches: true
 
+
 script:
   - ./gradlew clean build assemble
