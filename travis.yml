@@ -1,0 +1,22 @@
+language: android
+jdk: oraclejdk7
+
+os:
+  - linux
+
+android:
+  components:
+  - platform-tools
+  - tools
+  - build-tools-23.0.3
+  - android-23
+  - extra
+  - extra-android-m2repository
+
+
+env:
+  matrix:
+    - ANDROID_SDKS=android-23,sysimg-23  ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
+
+script:
+  - gradle clean build assemble
