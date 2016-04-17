@@ -27,7 +27,7 @@ script:
 
 deploy:
   provider: releases
-  api_key: "bf37061631cacf4db60db665cb8d892b03599ba0"
+  api_key: "f1cae9e3bea07d15b8a832764302a3f73c40e49e"
   file_glob: true
   file: "build/outputs/aar/*.aar"
   skip_cleanup: true
