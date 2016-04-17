@@ -19,4 +19,4 @@ env:
     - ANDROID_SDKS=android-23,sysimg-23  ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
 
 script:
-  - gradle clean build assemble
+  ./gradlew clean build assemble
