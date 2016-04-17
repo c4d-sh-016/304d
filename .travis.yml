@@ -27,8 +27,7 @@ script:
 
 deploy:
   provider: releases
-  api_key:
-    secure: "o4SVfDm4cTa9XApWybV+rWOTd5DLAxbPIFz5Lm4MhhNY/sqUVYGeYniaS7+2BeCPFDwLB+XOtykGSA2CCtcnYp4PYDuu6ve2zC6oeYZk07SRMKJQY32iBLsacf5uWbz2CWQqRvvmQzpdRCJE3hK7lbBNZATLdZPWn8uHBddqQiUEmeLlj7DThJqBVCalo0noBh+x5ulBWzv+SuJTQZA0TkD05OsAJhTHUf4BeMWQUb0m9aXGoJxb6qn5SSwGY45ul2jiB+nXGO++k9HyJRNuanq6oRRvdcIbqSpv/E3gvw+3WMTcQ85fMwXPt5Mpd/p4DU7xe9QCMhKVeLoOa3PvQTjAKHrYUHcacsJsLGlOGqdzmNpC7mUjLY5G8pHUuQDPSq3eJCcWy2RZFIHlHX9LQCXDB7rkjhdJIyuG3glSGDrDrL5dKMJJh/nPnGFPZ9b4xctIe1DVNm8SG40LR3H+ZZgjWVVwU8bQyL1sAyTtUaYdTiFN7bLCTx1PqTDwvbux/Z3oC8Vy0i1cEdjcxKam/Y4w8ESispY/vtnm3gxooYoDoMs+8JFLZ6dujtPQFEH6QRvgvJsUCXN3qGLVMimn48T6ORfJ2fUSbPfYzkcqzF0LrdHUaDTjJ0KSXoupp0IuyM220jujYvHwxdq9F36/o5LAw8OdnU7B2/JMEgrtiT0="
+  api_key: "bf37061631cacf4db60db665cb8d892b03599ba0"
   file_glob: true
   file: "build/outputs/aar/*.aar"
   skip_cleanup: true
