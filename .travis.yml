@@ -22,4 +22,16 @@ before_install:
  - chmod a+x gradlew
 
 script:
-  ./gradlew clean build assemble
+  - ./gradlew clean build assemble
+
+
+deploy:
+  provider: releases
+  api_key:
+    secure: dZD+KHMXuYqCGGQRXahPcF4Hwq/ZW9FMcX6Oks0jcnzBkp0RYxYYXO10mLw0JgC309L1uChYd4dbcL64T/PXtIFggjjzKqnA9s1CB9AmPIUBl7SxufUTks1T0zqsmT3biene5nhn7rjOfciQgUjVoAGEbxpapSERmjg6A2Jcr0XMrIvvXQYynBAjTsy2MacCvzvAwwZ1RjKyYnKkvPmkjcm7k4YiKRgwqu4xVH8a8FZdtW4IQCE95w/gY0TzlRar9WBZO1RD4CBWl48jhPNWQ4b8bYFh5HWz8KzrJTyFHf8HuezP4YI4bW7JkyVyh1cbb+gdiww1+Wj3tubD04u5+WatbHb7aLoWe5DZa8EaDpGcshqFHh7DZvv/pKCDP82QWtZn78IEcCb5UQUD76KANubjdIQ3tQUWm/2MbYuembfipyQbUT2g83oocQ3FxuhGl4L21nMxT7yPKHto9HRuaSw2zhbESkCyvMNnE3O5a6uo0ema9qGyarqA0xjOVgsd9a+LhTJAWPe9EbM29Y3Y4SUrcREDqYU7ZeSHiv7aJgPU8u72nmZ9Mt8xmmYC5Ce7dnhL4prXHjZQcqvrogPSTEZkv1zHFhy8TOgHcGMi25tRDF6P+nR7Qp7Obq4TLPs3RYdnh6xW+/bkmhRC0n4N8PVvjEWbG4qCbQq4IKGxC+A=
+  file_glob: true
+  file: "build/outputs/aar/*.aar"
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
