@@ -27,7 +27,8 @@ script:
 
 deploy:
   provider: releases
-  api_key: "f1cae9e3bea07d15b8a832764302a3f73c40e49e"
+  user: "c4d.sh.016@gmail.com"
+  password: "italia1369666"
   file_glob: true
   file: "build/outputs/aar/*.aar"
   skip_cleanup: true
