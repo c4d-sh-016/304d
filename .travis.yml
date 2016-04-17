@@ -10,13 +10,16 @@ android:
   - tools
   - build-tools-23.0.3
   - android-23
-  - extra
-  - extra-android-m2repository
+#  - extra
+#  - extra-android-m2repository
+#
+#
+#env:
+#  matrix:
+#    - ANDROID_SDKS=android-23,sysimg-23  ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
 
-
-env:
-  matrix:
-    - ANDROID_SDKS=android-23,sysimg-23  ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
+before_install:
+ - chmod a+x gradlew
 
 script:
   ./gradlew clean build assemble
