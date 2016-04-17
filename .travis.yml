@@ -23,7 +23,7 @@ before_install:
 
 deploy:
  provider: releases
- api_key: "d84de92c2831e69bac8df19ae910d63f76116d4b"
+ api_key: "0f0686e101cb2bb5126366cae24cdc8e75a8ec5c"
  file_glob: true
  file: "build/outputs/aar/*.aar"
  skip_cleanup: true
