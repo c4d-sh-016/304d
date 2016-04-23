@@ -31,3 +31,11 @@ deploy:
     all_branches: true
 script:
 - ./gradlew clean build assembleRelease
+notifications:
+  hipchat:
+    rooms:
+      secure: LID0hT7TiQUAhp+1ZOU9EMGZlSGtA2SCYXhGPymX2loz5rSkolMov0YTXLEdNsJZQE1SbwN256j3d4hCf2HYcltnPO8eW/fvytGEl/K6DbVfwLWlqzh7285dIOJbcv4d0+0OKy305FA1Rf4bjJcasAnX1heY6P6zYVqcu09qv3OdMoaWh4jxQryt++WgHK8F4I56DucRNyhD0omiFgAzHr8WsD0fdMfoK4DYGahyXocne2TYT8dZhR+NWlz1YY/vYlyfXETuXiW794pLwMyeIX4sppiMSyEPkCLSiywxVC2dMg0LuPTdfrpiC7rWjdW+3CdhZQbGgg5pY1qKj+uZq4Cm9LtVHvOcYddJsSoz8MsRKZ5vh0YYeHjkvWKSSPiAoF+9eOSffkBjub4kBYX9Uu95BPz/NJMl0DJGeJkpz9L/R2vzSV3B8t+CGiavO0opCmkhrrXtdb2zfNnJigu0I0OvZdu4Pfg0ggzjR51ug+18sTTPkN1HmfFwuKvimfiF/SnWDW/7qYlTONGxEEszN+3r3yJDkfYWmS3IdbFTOxKFgO0sIYlYsj/b5AvAiu/s3b83uFv0QBUiIZxrS/pujoNPnPL7Sez9Z4onEm7/9E1FLTpSkQNHzEStj0scQPNZ6WdYkUH/SkGM6hegnhRz9rW4ANABerBtBBfzQI9M4+s=
+    template:
+          - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
+    format: html
+    notify: true
