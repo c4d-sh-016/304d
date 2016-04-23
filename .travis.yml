@@ -23,7 +23,8 @@ before_install:
 
 deploy:
  provider: releases
- api_key: "29986ca4c831e730356bb91bc56422e15e7d71d3"
+ api_key:
+    secure: "d1ZTuvOpNfiQkqbsmIHykZvpdDhnIoYyfZGO3TKGxtayB4n0r8Nyl3HuQAJXS4CCCjYcfKPDD68U6rx/E4YM//5j3+X6GfaMSllbdUzi01XBDGs9WLFg3cPh3ir0zeeIUiZEcW5y93Pl/7jxK/f9wGrCawwVfHF7QR2OEkoTP+AQ7EcoK/jmYHnFAzxO97evixEoHxlgg9vQOkAbRoXxvk4QunnJXtk0HQmjkZMVDxB70nusb99QSqK0mzfXayFA/ezKdQDnvSvlym676Zdg0MbBKnm/XsSnM/uxy7Y42t1tcLpw0M2h2G1k0k7I1vBPomd2HhjmfL1BCQ9kuefNK7E8fE3Jc+m/VrK0kXOmhq5dDHFiPO8V0Zrno12Ls9PWlOCucx+wmVv/FTSEALwovnw6L9RtAwM3UaiWzhm/0SGTF9ZsRqYZQIwR1Pah9DZuJczzfCDjKF8GhUbfvGQP/R9O8pmlvEfo4cV+bOqvC6IC8CZ6DVrhvjSyeGh27Tdv7qzkM+E/O1222X+lFvASeMXiwiaZ20YGspVljm5S2PVV5CO6v3mZI2sSAatOf0dkUStXtN47qtV45P2fNHDTlxgRX4CAtLtcysgaXkDhii60qnR5/Aybq/O2Oq34QEPDP/fZNv6CoMZouH476T/PNs+7EIlsgPsZEutkwYGq7yo="
  file_glob: true
  file: "build/outputs/aar/*.aar"
  skip_cleanup: true
