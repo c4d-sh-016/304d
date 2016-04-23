@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-
     defaultConfig {
         applicationId "net.exshinigami.c4d"
         minSdkVersion 9
@@ -11,16 +10,14 @@ android {
         versionCode 1
         versionName "1.0"
     }
-
     signingConfigs {
         release {
-            storeFile file("client.keystore")
+            storeFile file('../client.keystore')
             storePassword System.getenv("KEYSTORE_PASSWORD")
             keyAlias System.getenv("KEY_ALIAS")
             keyPassword System.getenv("KEY_PASSWORD")
         }
     }
-
     buildTypes {
         release {
             minifyEnabled false
