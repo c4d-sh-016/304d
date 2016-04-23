@@ -1,9 +1,7 @@
 language: android
 jdk: oraclejdk7
-
 os:
-  - linux
-
+- linux
 android:
   components:
   - platform-tools
@@ -12,27 +10,26 @@ android:
   - android-23
   - extra
   - extra-android-m2repository
-
-
 env:
   matrix:
-    - ANDROID_SDKS=android-23,sysimg-23  ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
-
+  - ANDROID_SDKS=android-23,sysimg-23  ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
+  global:
+  - secure: pCEn5YlAsIRKEcoINqAcjCWdxhUlovhOMZjcv/MLA/vkbk/POUu5JGDELUQP+3imCCT3fNkDuA7QaeotzUyoswT7OY+QmZbOaToc2MnNq3ASMDJCm1qB90zbUoZ6biepSey7lNSjhDLypNg0ek1TQzY2pIvXPkYqWOy19ERA+TAGwCVpmAQ3xhW758IHkRRSaAn160lnJYF9q85Xoi1ttuAtDV5F4RRgcF+jKhWrSAjFZ05IJ7xmS/wnL826LK5mwenDQ6oqsWViQQPFDafZm420HZZeQgn4YvZJnuLCFliwOgw2RvPlOfBR8j2e7CihkV5GgxRtuMEmpJ2v/lGtYCgSAdjb7AdD+15w1JEz7xXZBmxOCuVGqPSFDCj1UZbxmgFTf6ua//lb4PttBdO3A81xinwelD9HOBe+tpK/VzBkxMdZHyb/um8CYZfJILCEgvGejmgt8l7QAckQbvIfEgjwdeG9aRzSL90UWltydI+P8QFdF26r2lwQq/czB8QwNiHK27pUJHpoDLqkUf6ajYwRMngKyMSH9XOj4VXUl0kttzlHPCsZmByLm8KRbMQCeJtK8Krme2273kqP++ZygYyIkMNWmHrf1U9c35dUXYIfqPTE7sx47896SyOZthBCGDBETbv76Dk+t1A5iBFSMXCoR90m/KPCtRJHjEA3MdI=
+  - secure: Ija52O/JPxh389IiLoYjCUsz+tx2SHo9RlQhJnwrQDzFM43HKB9QDuDgzfGJetayYTgLBdshTeZGCM0M4cTdbLi4wJV1tBNu2Bf+/vwRaBN0t1qRExcmVCo0E4f305UmiZpiAKiAKvOBJWmweIzMpM9idzI/lzUjYri1Ec1iiw/BAsEVgDjGouJXUxwElPw8vZ6tpxWnoudFsbyKiKJLO5EkKdVSKTB+/d0yZZpfhoP71PpdTKFmV3XjREJMRDJJt05qoY0DRfRLW+ntz5Jpo0pBWTLZ42Y2iWsiZ+4amJiMTULGSlC9ORfX44q30MOlvf2gwFeYBPGYndWKWjHN3S90g5T7QjaE/N/w582Evu0Mwugs912JYp6ahPo/Xrqj7sOcnf2NYO95P1wZ2s5IXpA8w8hxe4fNNSBGJVDCU/TTUK8lRmMBQAM+OpEHeRrYouDph0KiN5vjljIAH75Xi2il6eSwUcyBVikbQui0q+0hdyWyZS6Zry2KrVjYue9dqZTJGg4Cfb74wcFeO/z/KD9o7fgcvZJSXDDxeLYD7EpBh1BV01X9J3KHQXqSUF7lE0rP7yQ10jUViDZdaxspUXD/jeKZOom697e+JR3v4OlJ0caQfH+aJikwmTiI8GaV11wSAFh80cRuB59FyMDAhUoX85SK0kz8uQjL4WffAuc=
+  - secure: nmgUFLzGq31GdHCw/NzYF3vih7WXTdVeREIEOakVWtCdRyQCOELBfd0ZvG7DF1gcxS4mj1/pwiTGpi8/N3AC5WIeZpxlyuciZH7VgShjML8qnrxecX8S0fc/+HSnNUCwcAQ4P5jVTrQk7vCao/TSfDWaKIFGi9YHfnwYlXuRFW3Mrc/JP1g7RHWPH5c1qdk0esB11PURhM4caeaGa8CoB+2JMPrDJPGZve7AVNV5aTbLswPygFUS8FsFLrVVA5lF8FeN5rX43DpPkI/sGS/ZMQVjgShT7UQH/3KlbOMzBdOkN/Bg5i6tH+mfWuNxmCmdBTfsFDXixH+nJkhbS5r1JJ1JZzmNLm1GgO2vAZXmTFOWwZCIxlgxaoHOwuC+EhCmnPavU1bobYMp+eWjLHeyx9KdxE2yrAka7VN5poeaBu7Fh5EbwwIxj0EOExRZYWTrU3qW7JccJROXnyvAiPHVpo5xAortGl+Ocf/8QRhB1Qq3kJsNfCGPtWyG9kQElrLD39aW4BAtTEzlo05mDm1ZfzC8nE+9wov9DeObMmhB5sqs/ghxlVHFRtFbFWLQdMA2QJQDo9jcdtd5POlq0PLDC3zn0l2+Lir4I8qjNmicrpSFnRSxaEDof8H3QWOYQXKOnfClfewFP/eFxXqbeUaZDxRuc3ae+Vea5N8DFCWElkc=
 before_install:
- - chmod a+x gradlew
-
+- openssl aes-256-cbc -K $encrypted_e1f4fe71cb1b_key -iv $encrypted_e1f4fe71cb1b_iv
+  -in clientkeystore.enc -out clientkeystore -d
+- chmod x gradlew
 deploy:
- provider: releases
- api_key:
-    secure: "d1ZTuvOpNfiQkqbsmIHykZvpdDhnIoYyfZGO3TKGxtayB4n0r8Nyl3HuQAJXS4CCCjYcfKPDD68U6rx/E4YM//5j3+X6GfaMSllbdUzi01XBDGs9WLFg3cPh3ir0zeeIUiZEcW5y93Pl/7jxK/f9wGrCawwVfHF7QR2OEkoTP+AQ7EcoK/jmYHnFAzxO97evixEoHxlgg9vQOkAbRoXxvk4QunnJXtk0HQmjkZMVDxB70nusb99QSqK0mzfXayFA/ezKdQDnvSvlym676Zdg0MbBKnm/XsSnM/uxy7Y42t1tcLpw0M2h2G1k0k7I1vBPomd2HhjmfL1BCQ9kuefNK7E8fE3Jc+m/VrK0kXOmhq5dDHFiPO8V0Zrno12Ls9PWlOCucx+wmVv/FTSEALwovnw6L9RtAwM3UaiWzhm/0SGTF9ZsRqYZQIwR1Pah9DZuJczzfCDjKF8GhUbfvGQP/R9O8pmlvEfo4cV+bOqvC6IC8CZ6DVrhvjSyeGh27Tdv7qzkM+E/O1222X+lFvASeMXiwiaZ20YGspVljm5S2PVV5CO6v3mZI2sSAatOf0dkUStXtN47qtV45P2fNHDTlxgRX4CAtLtcysgaXkDhii60qnR5/Aybq/O2Oq34QEPDP/fZNv6CoMZouH476T/PNs+7EIlsgPsZEutkwYGq7yo="
- file_glob: true
- file: "build/outputs/apk/*-release.apk"
-
- skip_cleanup: true
- on:
-   tags: true
-   all_branches: true
-
-
+  provider: releases
+  api_key:
+    secure: d1ZTuvOpNfiQkqbsmIHykZvpdDhnIoYyfZGO3TKGxtayB4n0r8Nyl3HuQAJXS4CCCjYcfKPDD68U6rx/E4YM//5j3+X6GfaMSllbdUzi01XBDGs9WLFg3cPh3ir0zeeIUiZEcW5y93Pl/7jxK/f9wGrCawwVfHF7QR2OEkoTP+AQ7EcoK/jmYHnFAzxO97evixEoHxlgg9vQOkAbRoXxvk4QunnJXtk0HQmjkZMVDxB70nusb99QSqK0mzfXayFA/ezKdQDnvSvlym676Zdg0MbBKnm/XsSnM/uxy7Y42t1tcLpw0M2h2G1k0k7I1vBPomd2HhjmfL1BCQ9kuefNK7E8fE3Jc+m/VrK0kXOmhq5dDHFiPO8V0Zrno12Ls9PWlOCucx+wmVv/FTSEALwovnw6L9RtAwM3UaiWzhm/0SGTF9ZsRqYZQIwR1Pah9DZuJczzfCDjKF8GhUbfvGQP/R9O8pmlvEfo4cV+bOqvC6IC8CZ6DVrhvjSyeGh27Tdv7qzkM+E/O1222X+lFvASeMXiwiaZ20YGspVljm5S2PVV5CO6v3mZI2sSAatOf0dkUStXtN47qtV45P2fNHDTlxgRX4CAtLtcysgaXkDhii60qnR5/Aybq/O2Oq34QEPDP/fZNv6CoMZouH476T/PNs+7EIlsgPsZEutkwYGq7yo=
+  file_glob: true
+  file: build/outputs/apk/*-release.apk
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
 script:
-  - ./gradlew clean build assembleRelease
+- ./gradlew clean build assembleRelease
